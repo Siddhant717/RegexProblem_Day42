@@ -9,10 +9,10 @@
 </head>
 
 <body>
-    <!---UC1----->
+    <!---UC2----->
     <h3>Validating the Postal Index Number Using Regex</h3>
     <div>
-        <label for="number">UC1 - Postal Index Number </label>
+        <label for="number">UC2 - Postal Index Number </label>
         <input id="number" type="tel">
         <error-output class="number-error" for="number"> </error-output>
     </div>
@@ -20,7 +20,7 @@
         const number = document.querySelector('#number');
         const numbererror = document.querySelector('.number-error');
         number.addEventListener('input', function () {
-            let nameRegex = RegExp('^[0-9]{6}$');
+            let nameRegex = RegExp('^[1-9]{1}[0-9]{5}$');
             if (nameRegex.test(number.value))
                 numbererror.textContent = "";
             else numbererror.textContent = "Number is Incorrect";
